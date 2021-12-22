@@ -4,6 +4,7 @@ IP_ADDRESS=$(ifconfig | grep -E 'inet.[0-9]' | grep -v '127.0.0.1' | awk '{ prin
 fetch https://github.com/SumGuyV5/iocage-plugin-btfs/releases/download/1.6.0/go-btfs-1.6.0.pkg
 
 pkg install -y go-btfs-1.6.0.pkg
+rm go-btfs-1.6.0.pkg
 
 sysrc btfs_enable=YES
 
