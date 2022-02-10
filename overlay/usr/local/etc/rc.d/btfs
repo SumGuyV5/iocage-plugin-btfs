@@ -5,12 +5,12 @@
 
 . /etc/rc.subr
 
-export BTFS_PATH=/root/.btfs
+export BTFS_PATH=/usr/home/btfs/.btfs
 name="btfs"
 rcvar="btfs_enable"
-btfs_user="root"
+btfs_user="btfs"
 btfs_command="/usr/local/bin/btfs daemon"
-pidfile="/var/run/${name}.pid"
+pidfile="/var/run/btfs/${name}.pid"
 command="/usr/sbin/daemon"
 command_args="-P ${pidfile} -r -f ${btfs_command}"
 
